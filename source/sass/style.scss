@@ -2,3 +2,18 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "global/fonts.scss";
+@import "global/utils.scss";
+@import "global/variables.scss";
+@import "global/reboot.scss";
+
+//hero
+@import "blocks/hero.scss";
+@import "blocks/content.scss";
+
+//about
+@import "blocks/about.scss";
+
+//price
+@import "blocks/price.scss";
+@import "blocks/tab.scss";

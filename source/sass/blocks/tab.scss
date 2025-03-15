@@ -1,0 +1,352 @@
+.tab {
+  padding: 41px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding: 62px 194px 60px 192px;
+    gap: 36px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 102px 103px;
+    gap: 20px;
+  }
+}
+
+.tab__title-wrapper {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45.5px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @media (min-width: $tablet-width) {
+    gap: 44px;
+    margin: 0 auto 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 51px;
+    padding-bottom: 7px;
+    margin: 0 auto 20px;
+  }
+}
+
+.tab__list,
+.tab__card-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.tab__list {
+  position: relative;
+  z-index: 20;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      position: absolute;
+      content: '';
+      width: 274px;
+      height: 328px;
+      bottom: -48px;
+      left: calc(100% - 66px);
+      background: url("../../img/plates@1x.png") center no-repeat transparent;
+      transform: rotate(150deg);
+      z-index: -10;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      width: 321px;
+      height: 384px;
+      background-size: 321px 384px;
+      bottom: -93px;
+      left: calc(100% - 125px);
+    }
+  }
+}
+
+.tab__label {
+  cursor: pointer;
+}
+
+.tab__label-text {
+  padding: 0 0 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-font-third;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 4px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 6px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.tab__input:checked + .tab__label-text {
+  border-bottom: 2px solid $color-accent;
+  color: $color-font-primary;
+}
+
+.tab__item {
+  display: none;
+}
+
+.tab:has(.tab__input-1:checked) .tab__item-1,
+.tab:has(.tab__input-2:checked) .tab__item-2,
+.tab:has(.tab__input-3:checked) .tab__item-3 {
+  display: block;
+}
+
+.tab__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 41px;
+  }
+}
+
+.tab__card {
+  padding: 51px 42px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background-color: $color-bg-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 65px;
+    gap: 17px;
+  }
+}
+
+.tab__card-title {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.tab__card-description {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.tab__card-price {
+  position: relative;
+  margin: 0;
+  padding: 58px 34px 13px 0;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: $color-font-secondary;
+  z-index: 20;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    padding: 75px 44px 15px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 19px;
+    right: 0;
+    width: 24px;
+    height: 34px;
+    background: url("/__spritemap#sprite-rub-view") center no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 42px;
+      bottom: 24px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: -15px;
+    bottom: -14px;
+    font-size: 80px;
+    line-height: 150px;
+    opacity: 0.48;
+    font-weight: 700;
+    color: $color-font-fourth;
+    z-index: -10;
+  }
+    &--trainer {
+      &::before {
+        content: '#{$cost-with-trainer}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--trainer-6mount {
+      &::before {
+        content: '#{calc(6 * $cost-with-trainer)}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--trainer-12mount {
+      &::before {
+        content: '#{calc(12 * $cost-with-trainer)}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--daytime {
+      &::before {
+        content: '#{$cost-daytime}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--daytime-6mount {
+      &::before {
+        content: '#{calc(6 * $cost-daytime)}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--daytime-12mount {
+      &::before {
+        content: '#{calc(12 * $cost-daytime)}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--full-time {
+      &::before {
+        content: '#{$cost-full-time}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--full-time-6month {
+      &::before {
+        content: '#{calc(6 * $cost-full-time)}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    &--full-time-12month {
+      &::before {
+        content: '#{calc(12 * $cost-full-time)}';
+
+        @media (min-width: $tablet-width) {
+          left: -18px;
+          bottom: 1px;
+          font-size: 100px;
+        }
+      }
+    }
+  }
+
+.tab__card-link {
+  padding: 25px 47.5px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  border: 2px solid $color-font-primary;
+  text-decoration: none;
+  color: $color-font-primary;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 59px;
+  }
+}
