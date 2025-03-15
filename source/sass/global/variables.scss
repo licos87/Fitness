@@ -1,0 +1,36 @@
+// Colors
+
+$color-font-primary: #102654;
+$color-font-secondary: #103AAE;
+$color-font-third: rgba(16, 38, 84, 0.5);
+$color-font-fourth: #E8E8E8;
+
+$color-accent: #d10a42;
+
+$color-bg-primary: #f8f9fc;
+$color-bg-secondary: #ffffff;
+$color-bg-accent: #ED0233;
+
+
+// Typography
+
+$primary-family: "Roboto Condensed", "Arial", sans-serif;
+$second-family: "Alumni Sans", "Arial", sans-serif;
+
+// Animation
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+$trans-100: 0.13s $tf-default;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1366px;
+
+
+
+// Cost of lessons
+$cost-with-trainer: 5000;
+$cost-daytime: 1700;
+$cost-full-time: 2700;

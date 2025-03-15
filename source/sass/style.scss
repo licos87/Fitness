@@ -1,6 +1,4 @@
-// Vendor
-// ---------------------------------
-
+//global
 @import "vendor/normalize";
 @import "global/fonts.scss";
 @import "global/utils.scss";
@@ -17,3 +15,6 @@
 //price
 @import "blocks/price.scss";
 @import "blocks/tab.scss";
+
+//games
+@import "blocks/games.scss";
