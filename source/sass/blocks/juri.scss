@@ -1,0 +1,143 @@
+.juri {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 40px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 49px;
+  }
+}
+
+.juri__title {
+  font-family: $second-family;
+  font-size: 2rem;
+  line-height: 1em;
+  font-weight: 600;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 3.375rem;
+  }
+}
+
+.swiper-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover > .juri__description {
+    opacity: 1;
+    transition: opacity 0.4s;
+
+    &:before {
+      opacity: 1;
+      transition: opacity 0.4s;
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+.juri__picture {
+  position: relative;
+}
+
+.swiper-wrapper {
+  position: relative;
+}
+
+.juri__description-wrapper {
+  background-color: #102654;
+  background-blend-mode: multiply;
+}
+
+.juri__description {
+  position: absolute;
+  width: 260px;
+  height: 300px;
+  padding: 45px 40px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 10;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 38, 84, 0.89);
+    mix-blend-mode: color;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+}
+
+.juri__description-title {
+  margin: 0;
+  font-size: 1.375rem;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.juri__description-sub-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.juri_description-list {
+  padding: 0;
+  margin: 0;
+}
+
+.juri__description-item {
+  text-align: start;
+}
+
+.juri_description-text {
+  display: flex;
+  flex: 0;
+  font-size: 0.875rem;
+  line-height: 1.57em;
+  font-weight: 400;
+}
+
+.swiper-button-prev {
+  width: 16px;
+  height: 32px;
+}
+
+.swiper-button-next {
+  width: 16px;
+  height: 32px;
+}

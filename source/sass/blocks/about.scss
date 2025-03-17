@@ -71,7 +71,15 @@
   }
 }
 
-.about__description {
+.about > div p:last-child {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.about > div p {
   max-width: 502px;
   text-wrap: pretty;
   margin: 0 auto;
@@ -89,6 +97,16 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: start;
+    text-wrap: balance;
+  }
+}
+
+.about > div p {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     text-align: start;
     text-wrap: balance;
   }
