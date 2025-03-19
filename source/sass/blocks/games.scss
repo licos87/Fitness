@@ -76,7 +76,7 @@
 .games__card-date-wrapper {
   margin-bottom: 3px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 4px;
 
   @media (min-width: $tablet-width) {

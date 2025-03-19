@@ -135,9 +135,19 @@
 .swiper-button-prev {
   width: 16px;
   height: 32px;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .swiper-button-next {
   width: 16px;
   height: 32px;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
