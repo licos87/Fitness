@@ -20,7 +20,16 @@
 @import "blocks/games.scss";
 
 //juri
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/mousewheel';
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/mousewheel";
 @import "blocks/juri.scss";
+
+//features
+@import "./blocks/features.scss";
+
+//offers
+@import "./blocks/offers.scss";
+
+//faq
+@import "./blocks/faq.scss";

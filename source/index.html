@@ -114,7 +114,7 @@
               srcset="img/video-preview/video-preview-desktop@1x.jpg 1x, img/video-preview/video-preview-desktop@2x.jpg 2x"
               width="360"
               height="230">
-      <source type="image/jpg" media="(min-width: 768px)"
+      <source type="image/jpg" media="(min-width: 321px)"
               srcset="img/video-preview/video-preview-tablet@1x.jpg 1x, img/video-preview/video-preview-tablet@2x.jpg 2x"
               width="270" height="170">
       <img class="about__video-preview" src="img/video-preview/video-preview-mobile@1x.jpg"
@@ -479,9 +479,9 @@
 </section>
 
 <section class="features" data-test="features">
-  <h2 class="features title">Наши преимущества</h2>
   <div class="features__wrapper">
-    <ul>
+    <h2 class="features__title">Наши преимущества</h2>
+    <ul class="features__list">
       <li>
         <div>
           <p>900</p>
@@ -491,23 +491,137 @@
         </div>
       </li>
       <li>
-
+        <div>
+          <p>70</p>
+          <span>машин</span>
+          <h3>Собственная парковка</h3>
+          <p>Вы всегда найдёте место для своей машины на нашей парковке</p>
+        </div>
       </li>
       <li>
-
+        <div>
+          <p>100</p>
+          <h3>Тренажёров</h3>
+          <p>Современные тренажёры на все группы мышц</p>
+        </div>
       </li>
       <li>
-
+        <div>
+          <p>350</p>
+          <span>мест</span>
+          <h3>Комфорт</h3>
+          <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+        </div>
       </li>
       <li>
-
+        <div>
+          <p>5+</p>
+          <span>лет</span>
+          <h3>Тренерский опыт</h3>
+          <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
+        </div>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="offers" data-test="offers"></section>
-<section class="faq" data-test="faq"></section>
+<section class="offers" data-test="offers">
+  <h2 class="offers__title">Акции</h2>
+  <div class="offers__container">
+    <div class="offers__main-container">
+      <div class="offers__main">
+        <h3 class="offers__main-title">Год</h3>
+        <span class="offers__main-price">4999</span>
+        <p class="offers__main-description">Безлимитный абонемент в тренажёрный зал</p>
+        <a href="#" class="offers__main-link">ПОДРОБНЕЕ</a>
+      </div>
+      <picture class="offers__main-picture">
+        <source type="image/webp" media="(min-width: 1366px)"
+                srcset="./img/offers/girl-desktop@1x.webp 1x, ./img/offers/girl-desktop@2x.webp 2x" width="280"
+                height="460">
+        <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/offers/girl-tablet@1x.webp 1x, ./img/offers/girl-tablet@2x.webp 2x" width="400"
+                height="462">
+        <source type="image/webp" srcset="./img/offers/girl-mobile@1x.webp 1x, ./img/offers/girl-mobile@2x.webp 2x"
+                width="320" height="360">
+
+        <source type="image/jpg" media="(min-width: 1366px)"
+                srcset="./img/offers/girl-desktop@1x.jpg@1x.jpg 1x, ./img/offers/girl-desktop@2x.jpg 2x" width="280"
+                height="460">
+        <source type="image/jpg" media="(min-width: 768px)"
+                srcset="./img/offers/girl-tablet@1x.jpg 1x, ./img/offers/girl-tablet@2x.jpg 2x" width="400"
+                height="462">
+        <img class="offers__main-img" src="./img/offers/girl-mobile@1x.jpg" srcset="./img/offers/girl-mobile@2x.jpg 2x"
+             alt="Спортивная девушка" width="320" height="360" loading="lazy">
+      </picture>
+    </div>
+    <div class="offers__other-container">
+      <div class="offers__other">
+        <div class="offers__other-wrapper">
+          <h3 class="offers__other-title">Месяц бесплатно</h3>
+          <p class="offers__other-description">Приведи друга, получи абонемент в подарок</p>
+        </div>
+        <a href="#" class="offers__other-link">ПОДРОБНЕЕ</a>
+      </div>
+      <div class="offers__other">
+        <div class="offers__other-wrapper">
+          <h3 class="offers__other-title">Скидка 20%</h3>
+          <p class="offers__other-description">Корпоративный фитнес с командой</p>
+        </div>
+        <a href="#" class="offers__other-link">ПОДРОБНЕЕ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" data-test="faq">
+  <h2 class="faq__title">Вопросы и ответы</h2>
+  <ul class="faq__category-list">
+    <li class="fag__category-item">
+      <label class="fag__category-label">
+        <input class="fag__category-input category-club visually-hidden" name="category" type="radio">
+        <span class="fag__category-text">Центр</span>
+      </label>
+    </li>
+    <li class="fag__category-item">
+      <label class="fag__category-label">
+        <input class="fag__category-input category-membership visually-hidden" name="category" type="radio">
+        <span class="fag__category-text">Абонемент</span>
+      </label>
+    </li>
+    <li class="fag__category-item">
+      <label class="fag__category-label">
+        <input class="fag__category-input category-service visually-hidden" name="category" type="radio">
+        <span class="fag__category-text">Услуги</span>
+      </label>
+    </li>
+    <li class="fag__category-item">
+      <label class="fag__category-label">
+        <input class="fag__category-input category-rules visually-hidden" name="category" type="radio">
+        <span class="fag__category-text">Правила</span>
+      </label>
+    </li>
+  </ul>
+  <ul class="faq__questions-list">
+    <li class="faq__questions-item">
+      <h4 class="faq__questions-title">Как стать членом фитнес-центра?</h4>
+        <p class="faq__questions-text">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+    </li>
+    <li class="faq__questions-item">
+      <h4 class="faq__questions-title">Где можно посмотреть расписание?</h4>
+        <p class="faq__questions-text"></p>
+    </li>
+    <li class="faq__questions-item">
+      <h4 class="faq__questions-title">Есть кулеры в центре? Предоставляются полотенца?</h4>
+        <p class="faq__questions-text"></p>
+    </li>
+    <li class="faq__questions-item">
+      <h4 class="faq__questions-title">Сколько тренеров работает в клубе и какова  их квалификация?</h4>
+        <p class="faq__questions-text"></p>
+    </li>
+  </ul>
+</section>
+
 <section class="reviews" data-test="reviews"></section>
 <section class="form" data-test="form"></section>
 <section class="footer" data-test="footer"></section>
