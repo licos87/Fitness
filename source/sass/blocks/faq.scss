@@ -26,6 +26,11 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+
+  }
 }
 
 .fag__category-text {
@@ -56,40 +61,40 @@
   &:last-child {
     border-bottom: 1px solid $color-btn-divider;
   }
+}
 
-  & p {
-    margin: 0;
-    overflow: hidden;
-    margin-block-start: 1.25lh;
-    line-height: 0;
-    font-size: 1rem;
-    font-weight: 300;
-    color: transparent;
-    transition: line-height 1s, color 0.6s ease;
-  }
+.faq__questions-item p {
+  margin: 0;
+  overflow: hidden;
+  margin-block-start: 1.25lh;
+  line-height: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: transparent;
+  transition: line-height 1s, color 0.6s ease;
+}
 
-  &--opened p {
-    line-height: 1.25;
-    color: $color-font-primary;
-    transition: line-height 1s, color 1.6s ease
-  }
+.faq__questions-item--opened p {
+  line-height: 1.25;
+  color: $color-font-primary;
+  transition: line-height 1s, color 1.6s ease
+}
 
-  &--opened .faq__questions-button {
-    background-color: $color-btn-border;
-    transition: background-color 1s ease;
-  }
+.faq__questions-item--opened .faq__questions-button {
+  background-color: $color-btn-border;
+  transition: background-color 1s ease;
+}
 
-  &--opened .faq__questions-button:after {
-    background-color: $color-bg-secondary;
-    transform: rotate(180deg);
-    transition: transform 1s ease;
-  }
+.faq__questions-item--opened .faq__questions-button:after {
+  background-color: $color-bg-secondary;
+  transform: rotate(180deg);
+  transition: transform 1s ease;
+}
 
-  &--opened .faq__questions-button:before {
-    background-color: $color-bg-secondary;
-    transform: rotate(180deg);
-    transition: transform 1s ease;
-  }
+.faq__questions-item--opened .faq__questions-button:before {
+  background-color: $color-bg-secondary;
+  transform: rotate(180deg);
+  transition: transform 1s ease;
 }
 
 .faq__questions-title-wrapper {
@@ -97,14 +102,14 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
 
-  & h4 {
-    text-align: left;
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1em;
-    font-weight: 400;
-  }
+.faq__questions-title-wrapper h4 {
+  text-align: left;
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1em;
+  font-weight: 400;
 }
 
 .faq__questions-button {

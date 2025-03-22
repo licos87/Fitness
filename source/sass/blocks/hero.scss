@@ -65,6 +65,10 @@
     max-width: $desktop-width;
     margin: 0 auto;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 15px 120px;
+  }
 }
 
 .hero__content {
