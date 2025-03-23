@@ -2,7 +2,7 @@ import Swiper from './vendor/swiper/swiper.mjs';
 import Navigation from './vendor/swiper/modules/navigation.mjs';
 import Mousewheel from './vendor/swiper/modules/mousewheel.mjs';
 
-new Swiper('.swiper-container', {
+const juriSwiper = new Swiper('.juri__swiper-container', {
   modules: [Navigation, Mousewheel],
   direction: 'horizontal',
   grabCursor: 'pointer',
@@ -33,3 +33,5 @@ new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+juriSwiper.init();
