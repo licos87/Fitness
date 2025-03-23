@@ -3,12 +3,26 @@
 }
 
 .faq__container {
-  padding: 70px 15px ;
+  padding: 70px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: flex-start;
+    column-gap: 40px;
+    row-gap: 50px;
+  }
 }
 
 .faq__title {
@@ -17,6 +31,15 @@
   font-size: 2rem;
   line-height: 1em;
   font-weight: 600;
+
+  @media (min-width: $tablet-width) {
+    font-size: 2.625rem;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 3.375rem;
+    grid-column: 1/3;
+  }
 }
 
 .faq__category-list {
@@ -28,8 +51,13 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -40,6 +68,10 @@
   font-size: 1rem;
   line-height: 1em;
   border: 1px solid $color-tab-border;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.125rem;
+  }
 }
 
 .fag__category-input:checked + .fag__category-text {
@@ -58,6 +90,10 @@
   flex-direction: column;
   border-top: 1px solid $color-btn-divider;
 
+  @media (min-width: $tablet-width) {
+    padding: 23px 0;
+  }
+
   &:last-child {
     border-bottom: 1px solid $color-btn-divider;
   }
@@ -65,19 +101,35 @@
 
 .faq__questions-item p {
   margin: 0;
+  padding-right: 52px;
   overflow: hidden;
-  margin-block-start: 1.25lh;
+  margin-block-start: 1.25em;
   line-height: 0;
   font-size: 1rem;
   font-weight: 300;
   color: transparent;
   transition: line-height 1s, color 0.6s ease;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 118px;
+    font-size: 1.125rem;
+    margin-block-start: 0.56em;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 200px;
+    margin-block-start: 1.28em;
+  }
 }
 
 .faq__questions-item--opened p {
   line-height: 1.25;
   color: $color-font-primary;
-  transition: line-height 1s, color 1.6s ease
+  transition: line-height 1s, color 1.6s ease;
+
+  @media (min-width: $tablet-width) {
+    line-height: 1.33;
+  }
 }
 
 .faq__questions-item--opened .faq__questions-button {
@@ -110,6 +162,14 @@
   font-size: 1.25rem;
   line-height: 1em;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.37rem;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 1.5rem;
+  }
 }
 
 .faq__questions-button {
@@ -121,20 +181,20 @@
   transition: background-color 1s ease;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 14px;
-    height: 2px;
+    height: 1px;
     left: 25%;
     background-color: $color-btn-border;
     transition: transform 1s ease;
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 14px;
-    height: 2px;
+    height: 1px;
     left: 25%;
     transform: rotate(90deg);
     background-color: $color-btn-border;
@@ -154,8 +214,11 @@
 }
 
 .faq__container:has(.fag__category-club:checked) .faq__category-question-club,
-.faq__container:has(.fag__category-membership:checked) .faq__category-question-membership,
-.faq__container:has(.fag__category-service:checked) .faq__category-question-service,
-.faq__container:has(.fag__category-rules:checked) .faq__category-question-rules {
+.faq__container:has(.fag__category-membership:checked)
+  .faq__category-question-membership,
+.faq__container:has(.fag__category-service:checked)
+  .faq__category-question-service,
+.faq__container:has(.fag__category-rules:checked)
+  .faq__category-question-rules {
   height: 100%;
 }

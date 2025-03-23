@@ -2,5 +2,5 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
-import './swiper.js';
+import './juri-swiper.js';
 import './accordion-open.js';
