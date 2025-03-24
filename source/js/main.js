@@ -4,3 +4,4 @@
 // import 'swiper/css';
 import './juri-swiper.js';
 import './accordion-open.js';
+import './reviews-swiper.js';

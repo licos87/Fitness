@@ -1,22 +1,76 @@
 .reviews {
   padding: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 299px;
+  }
 }
 
 .reviews__title {
-  margin: 0;
+  margin: 0 0 40px;
   font-family: $second-family;
   font-size: 2rem;
   line-height: 1em;
   font-weight: 600;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 35px;
+    font-size: 3.375rem;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 75px;
+  }
 }
 
-.reviews__swiper-slider {
+.reviews__swiper-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 89px;
+  }
+
+}
+
+.reviews__swiper-wrapper {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  align-items: center;
+}
+
+.reviews__swiper-slide {
   padding: 30px 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   background-color: $color-btn-border;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 30px;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px;
+    gap: 30px;
+  }
+}
+
+.reviews__swiper-slide-picture {
+  flex-shrink: 0;
 }
 
 .reviews__swiper-slider-title {
@@ -24,5 +78,47 @@
   font-size: 1.125rem;
   line-height: 1.1em;
   font-weight: 400;
-  color: $color-font-primary;
+  color: $color-bg-secondary;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.375rem;
+    line-height: 1em;
+  }
+}
+
+.reviews__swiper-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.reviews__swiper-slider-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.57em;
+  font-weight: 300;
+  color: $color-bg-secondary;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+.reviews__swiper-button-prev,
+.reviews__swiper-button-next {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

@@ -1349,31 +1349,37 @@
 
       <section class="reviews" data-test="reviews">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__swiper-container">
-          <ul class="reviews__swiper-wrapper">
-            <li class="reviews__swiper-slider">
-              <picture> </picture>
+        <div class="reviews__swiper-container swiper-container">
+          <ul class="reviews__swiper-wrapper swiper-wrapper">
+            <li class="reviews__swiper-slide swiper-slide">
+              <picture class="reviews__swiper-slide-picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/reviews/reviews-anna-tablet@1x.webp 1x, ./img/reviews/reviews-anna-tablet@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/reviews/reviews-anna-mobile@1x.webp 1x, ./img/reviews/reviews-anna-mobile@2x.webp 2x" width="68" height="68">
+
+                <source type="image/png" media="(min-width: 768px)" srcset="./img/reviews/reviews-anna-tablet@1x.png 1x, ./img/reviews/reviews-anna-tablet@2x.png 2x" width="80" height="80">
+                <img class="reviews__swiper-slider-img" src="./img/reviews/reviews-anna-mobile@1x.png" srcset="./img/reviews/reviews-anna-mobile@2x.png 2x" width="68" height="68" alt="Анна Орлова">
+              </picture>
               <div class="reviews__swiper-slider-container">
                 <h3 class="reviews__swiper-slider-title">Анна Орлова</h3>
-                <p class="reviews__swiper-slider-text">
-                  «Хожу в Supergym уже больше года. Нравится, что в клубе всегда
-                  чисто, тренажёры обновляют, персонал дружелюбный.
-                  Зал просторный, даже в вечернее время нет очередей»
-                </p>
+                <p class="reviews__swiper-slider-text"> «Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
               </div>
             </li>
-            <li class="reviews__swiper-slider">
-              <picture> </picture>
+            <li class="reviews__swiper-slide swiper-slide">
+              <picture class="reviews__swiper-slide-picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/reviews/reviews-anna-tablet@1x.webp 1x, ./img/reviews/reviews-anna-tablet@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/reviews/reviews-anna-mobile@1x.webp 1x, ./img/reviews/reviews-anna-mobile@2x.webp 2x" width="68" height="68">
+
+                <source type="image/png" media="(min-width: 768px)" srcset="./img/reviews/reviews-anna-tablet@1x.png 1x, ./img/reviews/reviews-anna-tablet@2x.png 2x" width="80" height="80">
+                <img class="reviews__swiper-slider-img" src="./img/reviews/reviews-anna-mobile@1x.png" srcset="./img/reviews/reviews-anna-mobile@2x.png 2x" width="68" height="68" alt="Евгения Петрова">
+              </picture>
               <div class="reviews__swiper-slider-container">
                 <h3 class="reviews__swiper-slider-title">Евгения Петрова</h3>
-                <p class="reviews__swiper-slider-text">
-                  «Давно занимаюсь в этом спортзале, все очень круто.
-                  Квалифицированный персонал, тренажеры всегда чистые.
-                  Рекомендую всем!»
-                </p>
+                <p class="reviews__swiper-slider-text">«Давно занимаюсь в этом спортзале, все очень круто. Квалифицированный персонал, тренажеры всегда чистые. Рекомендую всем!»</p>
               </div>
             </li>
           </ul>
+          <div class="reviews__swiper-button-prev swiper-button-prev swiper-button-disabled swiper-button-lock"></div>
+          <div class="reviews__swiper-button-next swiper-button-next swiper-button-disabled swiper-button-lock"></div>
         </div>
       </section>
 
