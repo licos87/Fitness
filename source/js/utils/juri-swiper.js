@@ -1,6 +1,6 @@
-import Swiper from './vendor/swiper/swiper.mjs';
-import Navigation from './vendor/swiper/modules/navigation.mjs';
-import Mousewheel from './vendor/swiper/modules/mousewheel.mjs';
+import Swiper from '../vendor/swiper/swiper.mjs';
+import Navigation from '../vendor/swiper/modules/navigation.mjs';
+import Mousewheel from '../vendor/swiper/modules/mousewheel.mjs';
 
 const juriSwiper = new Swiper('.juri__swiper-container', {
   modules: [Navigation, Mousewheel],

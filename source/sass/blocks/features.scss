@@ -3,18 +3,19 @@
 }
 
 .features__wrapper {
-  padding: 40px 0;
+  padding: 41px 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 39px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 45px;
-    gap: 50px;
+    padding: 61px 45px 60px;
+    gap: 49px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 100px 103px;
+    gap: 50px;
   }
 }
 
@@ -42,26 +43,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 34px;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, minmax(324px, 1fr));
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 28px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, minmax(360px, 1fr));
     gap: 40px;
+    row-gap: 80px;
     align-items: flex-start;
   }
 }
 
-.features__list  li {
+.features__list li {
   width: 100%;
 
   @media (min-width: $tablet-width) {
-
     &:nth-child(1) {
       grid-column: 1/2;
     }
@@ -77,19 +80,6 @@
 
       @media (min-width: $desktop-width) {
         max-width: 100%;
-      }
-
-      & div {
-        padding: 35px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-
-        & p:last-child {
-          text-align: center;
-        }
       }
     }
 
@@ -116,7 +106,6 @@
       grid-column: 3/4;
     }
   }
-
 }
 
 .features__list li div {
@@ -125,14 +114,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 3fr;
     justify-items: start;
-    row-gap: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -149,7 +136,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      bottom: -50px;
+      bottom: -47px;
       left: 0;
       background-color: rgba(209, 10, 66, 0.2);
     }
@@ -165,7 +152,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      bottom: -50px;
+      bottom: -47px;
       left: 0;
       background-color: rgba(209, 10, 66, 0.2);
     }
@@ -173,7 +160,7 @@
 }
 
 .features__list p:first-child {
-  margin: 0;
+  margin: 0 0 1px;
   font-size: 4rem;
   line-height: 1em;
   font-weight: 700;
@@ -190,6 +177,7 @@
 }
 
 .features__list p:last-child {
+  margin: 0;
   font-size: 0.875rem;
   line-height: 1.57em;
   font-weight: 300;
@@ -207,6 +195,7 @@
 }
 
 .features__list span {
+  margin: 0 0 11px;
   font-size: 0.875rem;
   line-height: 1.43em;
   color: $color-font-five;
@@ -219,12 +208,13 @@
 }
 
 .features__list h3 {
-  margin: 0;
+  margin: 0 0 13px;
   font-size: 1.125rem;
   line-height: 1.11em;
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 12px;
     font-size: 1.25rem;
     line-height: 1em;
     grid-column: 2/3;
@@ -232,19 +222,32 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 0 8px;
     font-size: 1.375rem;
   }
 }
 
+.features__list li:nth-child(3) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
 .features__list li:nth-child(3) div {
-  margin: 40px 0;
-  padding: 30px 30px 40px;
+  margin: 5px 0 6px;
+  padding: 30px 30px 39px;
   background-color: #1c3374;
   color: $color-bg-secondary;
 
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 35px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (min-width: $desktop-width) {
@@ -256,26 +259,69 @@
 
 .features__list li:nth-child(3) p:first-child {
   -webkit-text-fill-color: $color-bg-secondary;
-}
+  margin-bottom: 6px;
 
-.features__list li:nth-child(3) p:last-child {
   @media (min-width: $tablet-width) {
-    font-size: 1rem;
-    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
-.features__list li:nth-child(3)  h3 {
+.features__list li:nth-child(3) p:last-child {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.features__list li:nth-child(3) h3 {
+  margin-bottom: 20px;
   font-size: 1.375rem;
   line-height: 1em;
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
     font-size: 1.5rem;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 1.625rem;
     margin-bottom: 20px;
+  }
+}
+
+.features__list li:nth-child(1) div,
+.features__list li:nth-child(4) div {
+  column-gap: 15px;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 44px;
+  }
+}
+
+.features__list li:nth-child(2) div {
+  column-gap: 7px;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 79px;
+  }
+}
+
+.features__list li:nth-child(5) div {
+  column-gap: 4px;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
   }
 }

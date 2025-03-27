@@ -7,6 +7,7 @@
     grid-row-start: 1;
     grid-row-end: 3;
     align-self: center;
+    transform: translateY(1px);
   }
 }
 
@@ -28,6 +29,14 @@
   flex-direction: column;
   gap: 14px;
   align-items: flex-end;
+
+  @media (min-width: $tablet-width) {
+    gap: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+  }
 }
 
 .content__text-city {
@@ -42,11 +51,13 @@
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 42px;
+    transform: translateY(1px);
   }
 
   @media (min-width: $desktop-width) {
     font-size: 54px;
     line-height: 54px;
+    transform: translate(2px, 0px);
   }
 }
 
@@ -56,7 +67,7 @@
   font-weight: 800;
   font-size: 62px;
   line-height: 62px;
-  letter-spacing: 0.02em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: right;
   color: #ffffff;
@@ -64,12 +75,15 @@
   @media (min-width: $tablet-width) {
     font-size: 72px;
     line-height: 85px;
+    transform: translate(3px, -2px);
     letter-spacing: 0.03em;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 92px;
     line-height: 110px;
+    transform: translate(1px, 1px);
+    letter-spacing: 0.04em;
   }
 }
 
@@ -89,9 +103,17 @@
 
   @media (min-width: $tablet-width) {
     width: 185px;
+    padding: 20px;
     grid-column-start: 2;
     grid-column-end: 3;
     justify-self: flex-end;
     align-self: flex-start;
+    transform: translateX(1px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 270px;
+    padding: 25px;
+    transform: translateX(3px);
   }
 }

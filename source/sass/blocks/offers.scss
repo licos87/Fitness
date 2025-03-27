@@ -1,8 +1,8 @@
 .offers {
-  padding: 40px 0;
+  padding: 41px 0 40px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 45px;
+    padding: 61px 45px 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,7 +21,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 2.625rem;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,7 +36,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 36px;
+
+  @media (min-width: $tablet-width) {
+    gap: 35px;
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
@@ -69,17 +73,18 @@
   color: $color-bg-secondary;
 
   @media (min-width: $tablet-width) {
+    padding: 40px 25px 39px;
     justify-content: start;
     align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 45px;
+   padding: 40px 45px 39px;
   }
 }
 
 .offers__main-container div h3 {
-  margin: 0 0 9px;
+  margin: 0 0 8px;
   font-size: 1.375rem;
   line-height: 1em;
   font-weight: 700;
@@ -101,6 +106,7 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 41px;
     font-size: 4.375rem;
   }
 }
@@ -145,6 +151,10 @@
   width: 100%;
   height: auto;
 
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+
   @media (min-width: $desktop-width) {
     display: block;
   }
@@ -169,7 +179,7 @@
 }
 
 .offers__other {
-  width: 100% ;
+  width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -183,7 +193,7 @@
   @media (min-width: $tablet-width) {
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 30px
+    gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -236,5 +246,5 @@
   font-weight: 700;
   color: $color-btn-border;
   text-decoration: none;
-  border-bottom: 1px solid  $color-btn-divider;
+  border-bottom: 1px solid $color-btn-divider;
 }

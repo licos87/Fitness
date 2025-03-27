@@ -1,7 +1,5 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
-import './juri-swiper.js';
-import './accordion-open.js';
-import './reviews-swiper.js';
+
+import './utils/juri-swiper.js';
+import './utils/accordion-open.js';
+import './utils/reviews-swiper.js';
+import './utils/feedback-form-validate.js';

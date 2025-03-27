@@ -1,15 +1,22 @@
 .hero {
-  background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+  background: linear-gradient(
+    90deg,
+    #1c3477 0%,
+    #1c3477 0.01%,
+    #1a3578 39.11%,
+    #73184b 75.5%,
+    #b4022a 100%
+  );
 }
 
 .hero__header {
   min-width: 320px;
   max-width: $desktop-width;
-  padding: 16px 15px;
+  padding: 15px 15px 17px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 48px;
+  margin: 0 auto 49px;
   gap: 10px;
 
   @media (min-width: $tablet-width) {
@@ -59,26 +66,47 @@
   padding: 0 15px 32px;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: $desktop-width;
     margin: 0 auto;
+    padding: 0 45px 100px;
+    max-width: $desktop-width;
+    justify-content: space-between;
+    gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 15px 120px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 175px 120px 250px;
+  }
 }
 
 .hero__content {
   display: grid;
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: auto 156px;
   align-items: flex-end;
   justify-self: end;
   max-width: 385px;
   gap: 21px;
-  row-gap: 48px;
+  row-gap: 47px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto 185px;
+    column-gap: 26px;
+    row-gap: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto 270px;
+    gap: 26px;
+    row-gap: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: initial;
+    row-gap: 40px;
+  }
 }
 
 .hero__content-img {
