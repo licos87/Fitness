@@ -1,15 +1,32 @@
 .feedback {
   width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .feedback__form {
-  padding: 70px 15px;
+  padding: 71px 15px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: $color-font-primary;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 103px;
+    align-items: flex-start;
+  }
 }
 
 .feedback__form-fieldset {
   padding: 0;
-  margin-bottom: 36px;
+  margin: 0 0 36px;
   border: none;
 }
 
@@ -22,6 +39,15 @@
   font-weight: 600;
   text-align: left;
   color: $color-bg-primary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 3.375rem;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .feedback__form-list {
@@ -30,16 +56,30 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 37px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 
 .feedback__form-item {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-width: 205px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 223px;
+  }
 }
 
 .feedback__form-input {
   width: 100%;
-  padding: 4px;
+  padding: 0 0 3px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $color-btn-divider;
@@ -60,18 +100,58 @@
   color: $color-error;
 }
 
+.feedback__form-button {
+  width: 290px;
+  padding: 22px 106px;
+  font-size: 0.75rem;
+  line-height: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-bg-primary;
+  background-color: transparent;
+  border: 2px solid $color-bg-primary;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    padding: 25px 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+    padding: 25px 56px;
+  }
+}
+
 .feedback__contacts {
-  padding: 40px 15px;
+  padding: 37px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+    gap: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 103px;
+    align-items: flex-start;
+  }
 }
 
 .feedback__contacts-title {
-  margin: 0 0 42px;
+  margin: 0;
   padding: 0;
   font-family: $second-family;
   font-size: 2rem;
   line-height: 1em;
   font-weight: 600;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 3.375rem;
+  }
 }
 
 .feedback__contacts-list {
@@ -80,15 +160,69 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    min-width: 440px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 61px;
+    row-gap: 14px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      background-color: $color-btn-divider;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 477px;
+    column-gap: 120px;
+    row-gap: 13px;
+  }
 }
 
 .feedback__contacts-item-title {
-  margin: 0 0 12px;
+  margin: 0 0 13px;
   padding: 0;
   font-size: 1.25rem;
   line-height: 1em;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 6px;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 7px;
+  }
+}
+
+.feedback__contacts-item:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+.feedback__contacts-item:nth-child(3) {
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.feedback__contacts-item:nth-child(4) {
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }
 
 .feedback__contacts-text {
@@ -97,6 +231,10 @@
   font-size: 0.875rem;
   line-height: 1.43em;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    line-height: 1.57em;
+  }
 }
 
 .feedback__contacts-link {

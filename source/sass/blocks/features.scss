@@ -131,7 +131,7 @@
   position: relative;
 
   @media (min-width: $desktop-width) {
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -147,7 +147,7 @@
   position: relative;
 
   @media (min-width: $desktop-width) {
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -166,7 +166,7 @@
   font-weight: 700;
   background: linear-gradient(129deg, #d10a42 0%, #0041ca 50%, #0041ca 100%);
   background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 
   @media (min-width: $tablet-width) {

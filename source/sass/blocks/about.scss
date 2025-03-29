@@ -41,7 +41,7 @@
     grid-column: 1 / 2;
     align-items: flex-start;
     padding: 0;
-    gap: 26px
+    gap: 26px;
   }
 }
 
@@ -276,6 +276,7 @@
   z-index: -10;
   height: calc(99% - 3px);
   width: 100%;
+  border: none;
 
   @media (min-width: $tablet-width) {
     width: 270px;

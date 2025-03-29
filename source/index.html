@@ -19,7 +19,9 @@
     <section class="hero" data-test="hero">
       <h2 class="visually-hidden">Фитнес центр в Омске</h2>
       <header class="hero__header">
-        <img class="hero__header-icon" src="img/sprite/logo.svg" width="100" height="20" alt="Логотип Supergym">
+        <svg class="hero__header-icon" width="100" height="20">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
         <a class="hero__header-tel" href="tel:+78005555555">
           8 800 555-55-55
           <span class="visually-hidden">Телефон для связи с нами</span>
@@ -126,7 +128,7 @@
           src="https://www.youtube.com/embed/9TZXsZItgdw?si=JXm2WfWY6uqy4Trr&amp;start=0"
           title="Бесплатные интерактивные онлайн-курсы"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" aria-hidden="true"></iframe>
       </div>
     </section>
 
@@ -542,8 +544,8 @@
         </ul>
       </div>
       <div class="juri__swiper-navigation">
-        <div class="juri__swiper-button-prev swiper-button-prev" tabindex="2"></div>
-        <div class="juri__swiper-button-next swiper-button-next" tabindex="3"></div>
+        <div class="juri__swiper-button-prev swiper-button-prev"></div>
+        <div class="juri__swiper-button-next swiper-button-next"></div>
       </div>
     </section>
 
@@ -664,29 +666,29 @@
       <div class="faq__container">
         <h2 class="faq__title">Вопросы и ответы</h2>
         <ul class="faq__category-list">
-          <li class="fag__category-item">
-            <label class="fag__category-label">
-              <input class="fag__category-input fag__category-club visually-hidden" name="category" type="radio"
+          <li class="faq__category-item">
+            <label class="faq__category-label">
+              <input class="faq__category-input faq__category-club visually-hidden" name="category" type="radio"
                 checked>
-              <span class="fag__category-text">Центр</span>
+              <span class="faq__category-text">Центр</span>
             </label>
           </li>
-          <li class="fag__category-item">
-            <label class="fag__category-label">
-              <input class="fag__category-input fag__category-membership visually-hidden" name="category" type="radio">
-              <span class="fag__category-text">Абонемент</span>
+          <li class="faq__category-item">
+            <label class="faq__category-label">
+              <input class="faq__category-input faq__category-membership visually-hidden" name="category" type="radio">
+              <span class="faq__category-text">Абонемент</span>
             </label>
           </li>
-          <li class="fag__category-item">
-            <label class="fag__category-label">
-              <input class="fag__category-input fag__category-service visually-hidden" name="category" type="radio">
-              <span class="fag__category-text">Услуги</span>
+          <li class="faq__category-item">
+            <label class="faq__category-label">
+              <input class="faq__category-input faq__category-service visually-hidden" name="category" type="radio">
+              <span class="faq__category-text">Услуги</span>
             </label>
           </li>
-          <li class="fag__category-item">
-            <label class="fag__category-label">
-              <input class="fag__category-input fag__category-rules visually-hidden" name="category" type="radio">
-              <span class="fag__category-text">Правила</span>
+          <li class="faq__category-item">
+            <label class="faq__category-label">
+              <input class="faq__category-input faq__category-rules visually-hidden" name="category" type="radio">
+              <span class="faq__category-text">Правила</span>
             </label>
           </li>
         </ul>
@@ -725,7 +727,7 @@
               </li>
               <li class="faq__questions-item">
                 <div class="faq__questions-title-wrapper">
-                  <h3>Сколько тренеров работает в клубе и какова <br>их&nbsp;квалификация?</h3>
+                  <h3>Сколько тренеров работает в&nbsp;клубе и какова <br>их&nbsp;квалификация?</h3>
                   <button class="faq__questions-button" type="button">
                     <span class="visually-hidden">Посмотреть ответ</span>
                   </button>
@@ -987,7 +989,6 @@
     </section>
 
     <section class="feedback" data-test="form">
-      </div>
       <h2 class="visually-hidden">Связаться с нами</h2>
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="feedback__form-fieldset">
@@ -1009,7 +1010,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form__button" type="submit">Отправить</button>
+        <button class="feedback__form-button" type="submit">Отправить</button>
       </form>
       <div class="feedback__contacts">
         <h3 class="feedback__contacts-title">Контакты</h3>
@@ -1024,7 +1025,7 @@
           </li>
           <li class="feedback__contacts-item">
             <h4 class="feedback__contacts-item-title">Телефон:</h4>
-            <a class="feedback__contacts-link" href="tel:88005555555">+7 (812) 555-05-55</a>
+            <a class="feedback__contacts-link" href="tel:88005555555">8 800 555-55-55</a>
           </li>
           <li class="feedback__contacts-item">
             <h4 class="feedback__contacts-item-title">Email:</h4>
@@ -1036,7 +1037,54 @@
 
   </main>
 
-  <!-- <footer class="footer" data-test="footer">1</footer> -->
+  <footer class="footer" data-test="footer">
+    <svg class="footer__logo" width="100" height="20">
+      <use href="/__spritemap#sprite-logo"></use>
+    </svg>
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="footer__link" href="#">Услуги</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="№">Абонементы</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Акции</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Тренеры</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Расписание</a>
+      </li>
+    </ul>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="https://vk.com/">
+          <span class="visually-hidden">Вконтакте</span>
+          <svg class="footer__social-icon" width="25" height="25" aria-hidden="true">
+            <use href="/__spritemap#sprite-vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="https://ok.ru/">
+          <span class="visually-hidden">Одноклассники</span>
+          <svg class="footer__social-icon" width="25" height="25" aria-hidden="true">
+            <use href="/__spritemap#sprite-classmate"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="https://www.reddit.com/">
+          <span class="visually-hidden">Reddit</span>
+          <svg class="footer__social-icon" width="25" height="25" aria-hidden="true">
+            <use href="/__spritemap#sprite-reddit"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
 
   <script type="module" src="js/main.js"></script>
 </body>

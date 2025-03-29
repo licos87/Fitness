@@ -3,12 +3,12 @@
 }
 
 .faq__container {
-  padding: 70px 15px;
+  padding: 71px 15px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 34px;
 
   @media (min-width: $tablet-width) {
     padding: 61px 45px 60px;
@@ -45,7 +45,7 @@
 .faq__category-list {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 1px 0 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -59,11 +59,11 @@
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
     grid-template-columns: 1fr;
-    gap: 11px;
+    gap: 10px;
   }
 }
 
-.fag__category-text {
+.faq__category-text {
   padding: 14px 23px;
   display: block;
   text-align: center;
@@ -77,9 +77,9 @@
   }
 }
 
-.fag__category-input:checked + .fag__category-text {
+.faq__category-input:checked + .faq__category-text {
   color: $color-bg-secondary;
-  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  background: linear-gradient(112deg, #ed0233 0%, #003eb7 100%);
 }
 
 .faq__questions-list {
@@ -107,13 +107,21 @@
 }
 
 .faq__questions-item:first-child {
-  padding: 22px 0 22px
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 0 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 0;
+  }
 }
 
 .faq__questions-item p {
   margin: 0;
   padding-right: 52px;
-  margin-block-start: 0em;
+  margin-block-start: 0;
   overflow: hidden;
   line-height: 0;
   font-size: 1rem;
@@ -143,7 +151,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-block-start: 1.28em;
+    margin-block-start: 1.29em;
   }
 }
 
@@ -152,13 +160,13 @@
   transition: background-color 1s ease;
 }
 
-.faq__questions-item--opened .faq__questions-button:after {
+.faq__questions-item--opened .faq__questions-button::after {
   background-color: $color-bg-secondary;
   transform: rotate(180deg);
   transition: transform 1s ease;
 }
 
-.faq__questions-item--opened .faq__questions-button:before {
+.faq__questions-item--opened .faq__questions-button::before {
   background-color: $color-bg-secondary;
   transform: rotate(180deg);
   transition: transform 1s ease;
@@ -216,7 +224,7 @@
     height: 40px;
   }
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     width: 14px;
@@ -231,7 +239,7 @@
     }
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     width: 14px;
@@ -259,12 +267,9 @@
   overflow: hidden;
 }
 
-.faq__container:has(.fag__category-club:checked) .faq__category-question-club,
-.faq__container:has(.fag__category-membership:checked)
-  .faq__category-question-membership,
-.faq__container:has(.fag__category-service:checked)
-  .faq__category-question-service,
-.faq__container:has(.fag__category-rules:checked)
-  .faq__category-question-rules {
+.faq__container:has(.faq__category-club:checked) .faq__category-question-club,
+.faq__container:has(.faq__category-membership:checked) .faq__category-question-membership,
+.faq__container:has(.faq__category-service:checked) .faq__category-question-service,
+.faq__container:has(.faq__category-rules:checked) .faq__category-question-rules {
   height: 100%;
 }

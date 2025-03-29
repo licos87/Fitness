@@ -44,7 +44,7 @@
 
   @media (min-width: $desktop-width) {
     width: 720px;
-    padding: 0px 80px;
+    padding: 0 80px;
   }
 }
 
@@ -131,9 +131,9 @@
 
 .reviews__swiper-navigation {
   position: absolute;
-    width: 680px;
-    top: 60%;
-    left: calc(50% - 340px);
+  width: 680px;
+  top: 60%;
+  left: calc(50% - 340px);
 
   @media (min-width: $desktop-width) {
     width: 768px;

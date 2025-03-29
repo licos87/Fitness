@@ -62,7 +62,7 @@
     opacity: 1;
     transition: opacity 0.4s;
 
-    &:before {
+    &::before {
       opacity: 1;
       transition: opacity 0.4s;
     }
@@ -87,6 +87,7 @@
   height: 32px;
   display: none;
   color: $color-font-primary;
+
   --swiper-navigation-size: 32px;
 
   @media (min-width: $tablet-width) {
@@ -99,6 +100,7 @@
   height: 32px;
   display: none;
   color: $color-font-primary;
+
   --swiper-navigation-size: 32px;
 
   @media (min-width: $tablet-width) {
@@ -130,12 +132,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: #ffffff;
   opacity: 0;
   transition: opacity 0.4s;
   z-index: 10;
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     top: 0;

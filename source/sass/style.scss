@@ -1,39 +1,42 @@
-//global
+// global
 @import "vendor/normalize";
-@import "global/fonts.scss";
-@import "global/utils.scss";
-@import "global/variables.scss";
-@import "global/reboot.scss";
+@import "global/fonts";
+@import "global/utils";
+@import "global/variables";
+@import "global/reboot";
 
-//hero
-@import "blocks/hero.scss";
-@import "blocks/content.scss";
+// hero
+@import "blocks/hero";
+@import "blocks/content";
 
-//about
-@import "blocks/about.scss";
+// about
+@import "blocks/about";
 
-//price
-@import "blocks/price.scss";
-@import "blocks/tab.scss";
+// price
+@import "blocks/price";
+@import "blocks/tab";
 
-//games
-@import "blocks/games.scss";
+// games
+@import "blocks/games";
 
-//juri
+// juri
 @import "vendor/swiper/swiper-bundle.css";
-@import "blocks/juri.scss";
+@import "blocks/juri";
 
-//features
-@import "./blocks/features.scss";
+// features
+@import "./blocks/features";
 
-//offers
-@import "./blocks/offers.scss";
+// offers
+@import "./blocks/offers";
 
-//faq
-@import "./blocks/faq.scss";
+// faq
+@import "./blocks/faq";
 
-//reviews
-@import "./blocks/reviews.scss";
+// reviews
+@import "./blocks/reviews";
 
-//feedback
-@import "./blocks/feedback.scss";
+// feedback
+@import "./blocks/feedback";
+
+// footer
+@import "./blocks/footer";
