@@ -7,6 +7,9 @@ const juriSwiper = new Swiper('.juri__swiper-container', {
   direction: 'horizontal',
   grabCursor: 'pointer',
   loop: true,
+  slidesPerView: 1,
+  simulateTouch: true,
+  loopAdditionalSlides: 2,
 
   breakpoints: {
     320: {
@@ -17,15 +20,20 @@ const juriSwiper = new Swiper('.juri__swiper-container', {
     768: {
       slidesPerView: 2,
       spaceBetween: 40,
+      allowTouchMove: true,
     },
 
     1366: {
       slidesPerView: 4,
       spaceBetween: 40,
+      allowTouchMove: false,
     }
   },
   mousewheel: {
     forceToAxis: true,
+    invert: false,
+    sensitivity: 1,
+    eventsTarget: 'container',
   },
 
   navigation: {

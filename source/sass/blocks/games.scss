@@ -234,6 +234,7 @@
   text-align: center;
   color: $color-bg-secondary;
   text-decoration: none;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     padding: 25px 50px;
@@ -244,6 +245,31 @@
     padding: 26px 50px 24px;
     margin-top: 1px;
   }
+
+    &:hover {
+    color: $color-font-secondary;
+    background-color: $color-bg-secondary;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000000;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  &:active {
+    color: $color-font-primary;
+    background-color: #ffffff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+}
+
+.games__card-link[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .games__picture {

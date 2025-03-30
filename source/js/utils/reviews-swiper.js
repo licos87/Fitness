@@ -6,13 +6,9 @@ const reviewsSwiper = new Swiper('.reviews__swiper-container', {
   modules: [Navigation, Mousewheel],
   direction: 'horizontal',
   grabCursor: 'pointer',
+  centeredSlides: true,
   spaceBetween: 90,
 
-  breakpoints: {
-    1366: {
-      spaceBetween: 90,
-    },
-  },
   mousewheel: {
     forceToAxis: true,
   },

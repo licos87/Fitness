@@ -112,7 +112,7 @@
 }
 
 .offers__main-container div p {
-  margin: 0 0 29px;
+  margin: 0 0 25px;
   font-size: 1rem;
   line-height: 1.25em;
   font-weight: 300;
@@ -126,17 +126,40 @@
 }
 
 .offers__main-container div a {
-  padding-bottom: 4px;
+  padding: 4px;
   font-size: 0.88rem;
   line-height: 1em;
   font-weight: 700;
   color: $color-bg-secondary;
   text-decoration: none;
   border-bottom: 1px solid $color-bg-secondary;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-bottom: 1px solid transparent;
+    outline: 1px solid $color-bg-secondary;
+  }
+
+    &:active {
+    border-bottom: 1px solid $color-bg-secondary;
+    outline: 1px solid transparent;
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.offers__main-container div a[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .offers__main-picture {
@@ -185,7 +208,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   border-width: 7px;
   border-style: solid;
   border-image: linear-gradient(158deg, $color-accent 0%, #00359f 100%) 1;
@@ -194,19 +217,19 @@
     padding: 20px;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 31px;
+    gap: 27px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 40px;
+    gap: 36px;
   }
 }
 
 .offers__other:last-child {
-  gap: 19px;
+  gap: 15px;
 
   @media (min-width: $desktop-width) {
-    gap: 40px;
+    gap: 36px;
   }
 }
 
@@ -249,11 +272,33 @@
 
 .offers__other-link {
   margin-top: auto;
-  padding-bottom: 4px;
+  padding: 4px;
   font-size: 0.88rem;
   line-height: 1em;
   font-weight: 700;
   color: $color-btn-border;
   text-decoration: none;
   border-bottom: 1px solid $color-btn-divider;
+
+    &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-bottom: 1px solid transparent;
+    outline: 1px solid $color-btn-border;
+  }
+
+    &:active {
+    border-bottom: 1px solid $color-btn-border;
+    outline: 1px solid transparent;
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.offers__other-link[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
 }
