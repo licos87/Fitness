@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Фитнес центр в Омске">
   <title>SUPERGYM</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="./fonts/roboto-condensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font"
+  crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
-  <link rel="icon" href="./public/favicon.ico">
-  <link rel="preload" href="./fonts/RobotoCondensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font"
-    crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -124,11 +124,7 @@
           </svg>
           <span class="visually-hidden">Запустить проигрыватель</span>
         </button>
-        <iframe class="about__video" width="320" height="170"
-          src="https://www.youtube.com/embed/9TZXsZItgdw?si=JXm2WfWY6uqy4Trr&amp;start=0"
-          title="Бесплатные интерактивные онлайн-курсы"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" aria-hidden="true"></iframe>
+        <div class="about__video"></div>
       </div>
     </section>
 
@@ -996,16 +992,16 @@
           <ul class="feedback__form-list">
             <li class="feedback__form-item">
               <label class="feedback__form-label">
-                <input class="feedback__form-input feedback__form-input-name" type="text" name="name" placeholder="Имя"
+                <input class="feedback__form-input feedback__form-input--name" type="text" name="name" placeholder="Имя"
                   required>
-                <span class="feedback__form-error feedback__form-error-name">Текст ошибки</span>
+                <span class="feedback__form-error feedback__form-error--name">Текст ошибки</span>
               </label>
             </li>
             <li class="feedback__form-item">
               <label class="feedback__form-label">
-                <input class="feedback__form-input feedback__form-input-phone" type="tel" name="phone"
+                <input class="feedback__form-input feedback__form-input--phone" type="tel" name="phone"
                   placeholder="Телефон" required>
-                <span class="feedback__form-error feedback__form-error-phone">Текст ошибки</span>
+                <span class="feedback__form-error feedback__form-error--phone">Текст ошибки</span>
               </label>
             </li>
           </ul>

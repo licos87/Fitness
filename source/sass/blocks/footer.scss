@@ -51,7 +51,7 @@
 }
 
 .footer__link {
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   line-height: 1.43em;
   font-weight: 400;
   color: $color-bg-primary;
@@ -97,7 +97,7 @@
 }
 
 .footer__social-link:focus .footer__social-icon,
-footer__social-link:focus-visible .footer__social-icon {
+.footer__social-link:focus-visible .footer__social-icon {
   background-color: $color-font-secondary;
   fill: $color-bg-primary;
   transition: background-color 0.3s ease, fill 0.3s ease;

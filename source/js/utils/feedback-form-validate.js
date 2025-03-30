@@ -1,8 +1,8 @@
 const form = document.querySelector('.feedback__form');
-const nameInput = document.querySelector('.feedback__form-input-name');
-const phoneInput = document.querySelector('.feedback__form-input-phone');
-const errorNameText = form.querySelector('.feedback__form-error-name');
-const errorPhoneText = form.querySelector('.feedback__form-error-phone');
+const nameInput = document.querySelector('.feedback__form-input--name');
+const phoneInput = document.querySelector('.feedback__form-input--phone');
+const errorNameText = form.querySelector('.feedback__form-error--name');
+const errorPhoneText = form.querySelector('.feedback__form-error--phone');
 
 function checkValidityName(name) {
   const nameRegex = /^[A-Za-zА-Яа-яЁё\s]+$/;

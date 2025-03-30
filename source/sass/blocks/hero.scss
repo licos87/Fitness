@@ -13,20 +13,20 @@
 .hero__header {
   min-width: 320px;
   max-width: $desktop-width;
-  padding: 15px 15px 17px;
+  padding: 9px 16px 12px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 49px;
+  margin: 0 auto 48px;
   gap: 10px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 45px;
+    padding: 24px 45px;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 103px;
+    padding: 22px 103px;
     margin: 0 auto 30px;
   }
 }
@@ -39,11 +39,12 @@
 
   @media (min-width: $desktop-width) {
     width: 130px;
-    height: 25px;
+    height: 26px;
   }
 }
 
 .hero__header-tel {
+  padding: 6px 0 5px;
   color: #ffffff;
   font-weight: 700;
   font-size: 22px;
@@ -59,6 +60,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 10px 0 5px;
     font-size: 26px;
     line-height: 26px;
   }
@@ -98,12 +100,14 @@
     margin: 0 auto;
     padding: 0 45px 100px;
     max-width: $desktop-width;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 15px 120px;
+    justify-content: space-between;
+    gap: initial;
   }
 
   @media (min-width: $desktop-width) {

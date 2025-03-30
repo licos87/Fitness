@@ -11,10 +11,11 @@
   padding: 71px 15px 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background-color: $color-font-primary;
 
   @media (min-width: $tablet-width) {
+    align-items: center;
     padding: 60px 45px;
   }
 
@@ -25,9 +26,14 @@
 }
 
 .feedback__form-fieldset {
+  width: 100%;
   padding: 0;
   margin: 0 0 36px;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 35px;
+  }
 }
 
 .feedback__form-title {
@@ -39,13 +45,15 @@
   font-weight: 600;
   text-align: left;
   color: $color-bg-primary;
+  letter-spacing: -0.02px;
 
   @media (min-width: $tablet-width) {
-    font-size: 3.375rem;
+    font-size: 3.38rem;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
+    letter-spacing: -0.05px;
     text-align: left;
   }
 }
@@ -83,18 +91,26 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $color-btn-divider;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   line-height: 1.57em;
   font-weight: 300;
   color: $color-bg-primary;
 }
+
+// .feedback__form-input--phone {
+//   padding: 0 0 2px;
+
+//   @media (min-width: $tablet-width) {
+//     padding: 0 0 3px;
+//   }
+// }
 
 .feedback__form-error {
   visibility: hidden;
   position: absolute;
   top: 100%;
   left: 0;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   line-height: 1.57em;
   font-weight: 400;
   color: $color-error;
@@ -102,7 +118,7 @@
 
 .feedback__form-button {
   width: 290px;
-  padding: 22px 106px;
+  height: 60px;
   font-size: 0.75rem;
   line-height: 1em;
   font-weight: 700;
@@ -113,7 +129,8 @@
 
   @media (min-width: $tablet-width) {
     width: 440px;
-    padding: 25px 56px;
+    height: 66px;
+    padding: 26px 56px 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -126,11 +143,12 @@
   padding: 37px 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 37px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 45px;
+    align-items: center;
+    padding: 60px 45px 58px;
     gap: 36px;
   }
 
@@ -150,7 +168,8 @@
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    font-size: 3.375rem;
+    font-size: 3.38rem;
+    letter-spacing: -0.2px;
   }
 }
 
@@ -168,7 +187,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 61px;
-    row-gap: 14px;
+    row-gap: 13px;
 
     &::after {
       content: "";
@@ -195,7 +214,7 @@
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 6px;
+    margin: 0 0 7px;
     font-size: 1.5rem;
   }
 
@@ -228,21 +247,24 @@
 .feedback__contacts-text {
   margin: 0;
   padding: 0;
-  font-size: 0.875rem;
-  line-height: 1.43em;
+  font-size: 0.88rem;
+  line-height: 1.45em;
   font-weight: 400;
+  letter-spacing: -0.02px;
 
   @media (min-width: $tablet-width) {
     line-height: 1.57em;
+    letter-spacing: normal;
   }
 }
 
 .feedback__contacts-link {
   margin: 0;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   line-height: 1.43em;
   font-weight: 400;
   text-decoration: none;
   color: $color-font-primary;
+  letter-spacing: -0.03px;
 }

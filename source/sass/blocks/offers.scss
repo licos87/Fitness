@@ -17,15 +17,15 @@
   line-height: 1em;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    font-size: 2.625rem;
+    font-size: 2.63rem;
     margin-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 3.375rem;
+    font-size: 3.38rem;
     margin-bottom: 70px;
   }
 }
@@ -64,7 +64,7 @@
 }
 
 .offers__main-container div {
-  padding: 30px;
+  padding: 31px 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,19 +73,19 @@
   color: $color-bg-secondary;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 25px 39px;
+    padding: 40px 25px;
     justify-content: start;
     align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 45px 39px;
+    padding: 40px 45px;
   }
 }
 
 .offers__main-container div h3 {
-  margin: 0 0 8px;
-  font-size: 1.375rem;
+  margin: 0 0 7px;
+  font-size: 1.38rem;
   line-height: 1em;
   font-weight: 700;
 
@@ -95,7 +95,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 1.625rem;
+    font-size: 1.63rem;
   }
 }
 
@@ -106,28 +106,28 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 41px;
-    font-size: 4.375rem;
+    margin: 0 0 40px;
+    font-size: 4.38rem;
   }
 }
 
 .offers__main-container div p {
-  margin: 0 0 28px;
+  margin: 0 0 29px;
   font-size: 1rem;
   line-height: 1.25em;
   font-weight: 300;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    font-size: 1.125rem;
+    font-size: 1.13rem;
     line-height: 1.33em;
     text-align: left;
   }
 }
 
 .offers__main-container div a {
-  padding-bottom: 5px;
-  font-size: 0.875rem;
+  padding-bottom: 4px;
+  font-size: 0.88rem;
   line-height: 1em;
   font-weight: 700;
   color: $color-bg-secondary;
@@ -180,7 +180,7 @@
 
 .offers__other {
   width: 100%;
-  padding: 20px;
+  padding: 21px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,10 +191,19 @@
   border-image: linear-gradient(158deg, $color-accent 0%, #00359f 100%) 1;
 
   @media (min-width: $tablet-width) {
+    padding: 20px;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 31px;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+  }
+}
+
+.offers__other:last-child {
+  gap: 19px;
 
   @media (min-width: $desktop-width) {
     gap: 40px;
@@ -215,18 +224,18 @@
 
 .offers__other div h3 {
   margin: 0;
-  font-size: 1.375rem;
+  font-size: 1.38rem;
   line-height: 1em;
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
-    font-size: 1.625rem;
+    font-size: 1.63rem;
   }
 }
 
 .offers__other div p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   line-height: 1.57em;
   font-weight: 300;
   text-align: center;
@@ -240,8 +249,8 @@
 
 .offers__other-link {
   margin-top: auto;
-  padding-bottom: 5px;
-  font-size: 0.875rem;
+  padding-bottom: 4px;
+  font-size: 0.88rem;
   line-height: 1em;
   font-weight: 700;
   color: $color-btn-border;

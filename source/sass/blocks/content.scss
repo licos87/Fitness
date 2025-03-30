@@ -9,6 +9,10 @@
     align-self: center;
     transform: translateY(1px);
   }
+
+  @media (min-width: $desktop-width) {
+    transform: translate(3px, 1px);
+  }
 }
 
 .content__list-text {
@@ -65,23 +69,23 @@
   margin: 0;
   font-family: $second-family;
   font-weight: 800;
-  font-size: 62px;
-  line-height: 62px;
-  letter-spacing: 1px;
+  font-size: 3.88rem;
+  line-height: 1em;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   text-align: right;
   color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    font-size: 72px;
-    line-height: 85px;
-    transform: translate(3px, -2px);
+    font-size: 4.5rem;
+    line-height: 1.18em;
+    transform: translate(3px, -1px);
     letter-spacing: 0.03em;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 92px;
-    line-height: 110px;
+    font-size: 5.75rem;
+    line-height: 1.2em;
     transform: translate(1px, 1px);
     letter-spacing: 0.04em;
   }
@@ -105,6 +109,7 @@
 
   @media (min-width: $tablet-width) {
     width: 185px;
+    margin-right: 1px;
     padding: 20px;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -116,7 +121,7 @@
   @media (min-width: $desktop-width) {
     width: 270px;
     padding: 25px;
-    transform: translateX(3px);
+    transform: translateX(4px);
   }
 
   &:hover {
