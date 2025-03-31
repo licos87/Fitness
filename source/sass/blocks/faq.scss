@@ -121,7 +121,7 @@
 }
 
 .faq__questions-item:last-child {
-  padding: 20px 0 20px;
+  padding: 20px 0;
   border-bottom: 1px solid $color-btn-divider;
 
   @media (min-width: $tablet-width) {
@@ -361,7 +361,7 @@
     }
   }
 
-    &::after {
+  &::after {
     content: "";
     position: absolute;
     width: 14px;
@@ -390,11 +390,8 @@
 }
 
 .faq__container:has(.faq__category-club:checked) .faq__category-question-club,
-.faq__container:has(.faq__category-membership:checked)
-  .faq__category-question-membership,
-.faq__container:has(.faq__category-service:checked)
-  .faq__category-question-service,
-.faq__container:has(.faq__category-rules:checked)
-  .faq__category-question-rules {
+.faq__container:has(.faq__category-membership:checked) .faq__category-question-membership,
+.faq__container:has(.faq__category-service:checked) .faq__category-question-service,
+.faq__container:has(.faq__category-rules:checked) .faq__category-question-rules {
   height: 100%;
 }

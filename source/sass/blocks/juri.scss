@@ -43,7 +43,7 @@
 
   @media (min-width: $desktop-width) {
     width: 1230px;
-        padding: 0 35px;
+    padding: 0 35px;
   }
 }
 
@@ -74,40 +74,68 @@
 
 .juri__swiper-navigation {
   position: absolute;
-  width: 688px;
-  top: calc(60% + 4px);
-  left: calc(50% - 344px);
+  width: 721px;
+  top: calc(59% + 6px);
+  left: calc(50% - 360px);
 
   @media (min-width: $desktop-width) {
-    width: 1286px;
-    left: calc(50% - 641px);
-    top: calc(57% + 6px);
+    width: 1322px;
+    left: calc(50% - 660px);
+    top: calc(50% + 44px);
   }
 }
 
 .juri__swiper-button-prev {
-  width: 16px;
-  height: 32px;
   display: none;
   color: $color-font-primary;
+  transform: rotate(180deg);
 
-  --swiper-navigation-size: 32px;
-
-  @media (min-width: $tablet-width) {
-    display: block;
+  &::after {
+    content: "";
   }
 }
 
 .juri__swiper-button-next {
-  width: 16px;
-  height: 32px;
   display: none;
   color: $color-font-primary;
 
-  --swiper-navigation-size: 32px;
+  &::after {
+    content: "";
+  }
+}
+
+.juri__swiper-button-icon {
+  stroke: $color-font-primary;
+}
+
+.juri__swiper-button {
+  width: 50px;
+  height: 50px;
+  padding: 8px 15px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  outline: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
+  }
+
+  &:hover {
+    border: 1px solid $color-font-primary;
+  }
+
+  &:focus {
+    border: 1px solid $color-font-primary;
+    background-color: #e8e8e8;
+  }
+
+  &:active {
+    border: 1px solid $color-font-primary;
+    background-color: $color-font-primary;
+  }
+
+  &:active svg {
+    stroke: #ffffff;
   }
 }
 

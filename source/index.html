@@ -8,7 +8,7 @@
   <title>SUPERGYM</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="preload" href="./fonts/roboto-condensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font"
-  crossorigin="anonymous">
+    crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -540,8 +540,16 @@
         </ul>
       </div>
       <div class="juri__swiper-navigation">
-        <div class="juri__swiper-button-prev swiper-button-prev"></div>
-        <div class="juri__swiper-button-next swiper-button-next"></div>
+        <div class="juri__swiper-button-prev juri__swiper-button swiper-button-prev">
+          <svg class="juri__swiper-button-icon" width="16" height="32" aria-hidden="true">
+            <use href="#sprite-arrow-next"></use>
+          </svg>
+        </div>
+        <div class="juri__swiper-button-next juri__swiper-button swiper-button-next">
+          <svg class="juri__swiper-button-icon" width="16" height="32" aria-hidden="true">
+            <use href="#sprite-arrow-next"></use>
+          </svg>
+        </div>
       </div>
     </section>
 
@@ -938,9 +946,8 @@
               <source type="image/png" media="(min-width: 768px)"
                 srcset="./img/reviews/reviews-anna-tablet@1x.png 1x, ./img/reviews/reviews-anna-tablet@2x.png 2x"
                 width="80" height="80">
-              <img src="./img/reviews/reviews-anna-mobile@1x.png"
-                srcset="./img/reviews/reviews-anna-mobile@2x.png 2x" width="68" height="68" loading="lazy"
-                alt="Анна Орлова">
+              <img src="./img/reviews/reviews-anna-mobile@1x.png" srcset="./img/reviews/reviews-anna-mobile@2x.png 2x"
+                width="68" height="68" loading="lazy" alt="Анна Орлова">
             </picture>
             <div>
               <h3>Анна Орлова</h3>
@@ -963,9 +970,8 @@
               <source type="image/png" media="(min-width: 768px)"
                 srcset="./img/reviews/reviews-anna-tablet@1x.png 1x, ./img/reviews/reviews-anna-tablet@2x.png 2x"
                 width="80" height="80">
-              <img src="./img/reviews/reviews-anna-mobile@1x.png"
-                srcset="./img/reviews/reviews-anna-mobile@2x.png 2x" width="68" height="68" loading="lazy"
-                alt="Евгения Петрова">
+              <img src="./img/reviews/reviews-anna-mobile@1x.png" srcset="./img/reviews/reviews-anna-mobile@2x.png 2x"
+                width="68" height="68" loading="lazy" alt="Евгения Петрова">
             </picture>
             <div>
               <h3>Евгения Петрова</h3>
@@ -979,8 +985,16 @@
         </ul>
       </div>
       <div class="reviews__swiper-navigation">
-        <div class="reviews__swiper-button-prev swiper-button-prev swiper-button-disabled swiper-button-lock"></div>
-        <div class="reviews__swiper-button-next swiper-button-next swiper-button-disabled swiper-button-lock"></div>
+        <div class="reviews__swiper-button-prev reviews__swiper-button swiper-button-prev swiper-button-disabled swiper-button-lock">
+          <svg class="reviews__swiper-button-icon" width="16" height="32" aria-hidden="true">
+            <use href="#sprite-arrow-next"></use>
+          </svg>
+        </div>
+        <div class="reviews__swiper-button-next reviews__swiper-button swiper-button-next swiper-button-disabled swiper-button-lock">
+          <svg class="reviews__swiper-button-icon" width="16" height="32" aria-hidden="true">
+            <use href="#sprite-arrow-next"></use>
+          </svg>
+        </div>
       </div>
     </section>
 
