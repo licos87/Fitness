@@ -43,3 +43,9 @@ const juriSwiper = new Swiper('.juri__swiper-container', {
 });
 
 juriSwiper.init();
+
+juriSwiper.slides.forEach((slide, index) => {
+  slide.addEventListener('focusin', () => {
+    juriSwiper.slideTo(index);
+  });
+});

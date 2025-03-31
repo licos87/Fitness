@@ -6,6 +6,7 @@ const reviewsSwiper = new Swiper('.reviews__swiper-container', {
   modules: [Navigation, Mousewheel],
   direction: 'horizontal',
   grabCursor: 'pointer',
+  slidesPerView: 'auto',
   centeredSlides: true,
   spaceBetween: 90,
 
@@ -20,3 +21,9 @@ const reviewsSwiper = new Swiper('.reviews__swiper-container', {
 });
 
 reviewsSwiper.init();
+
+reviewsSwiper.slides.forEach((slide, index) => {
+  slide.addEventListener('focusin', () => {
+    reviewsSwiper.slideTo(index);
+  });
+});

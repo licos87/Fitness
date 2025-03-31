@@ -76,7 +76,7 @@
   }
 }
 
-.reviews__swiper-slide-picture {
+.reviews__swiper-slide picture {
   flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
@@ -84,11 +84,11 @@
   }
 }
 
-.reviews__swiper-slider-img {
+.reviews__swiper-slide img {
   display: block;
 }
 
-.reviews__swiper-slider-title {
+.reviews__swiper-slide h3 {
   margin: 0;
   font-size: 1.13rem;
   line-height: 1.1em;
@@ -102,7 +102,7 @@
   }
 }
 
-.reviews__swiper-slider-container {
+.reviews__swiper-slide div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +114,7 @@
   }
 }
 
-.reviews__swiper-slider-text {
+.reviews__swiper-slide p {
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.57em;

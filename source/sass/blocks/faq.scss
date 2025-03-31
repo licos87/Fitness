@@ -70,11 +70,28 @@
   font-size: 1rem;
   line-height: 1em;
   border: 1px solid $color-tab-border;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding: 17px 23px;
     font-size: 1.13rem;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-font-primary;
+  }
+}
+
+.faq__category-input:active + .faq__category-text {
+  color: $color-bg-secondary;
+  background: linear-gradient(112deg, #ed0233 0%, #003eb7 100%);
+  border-image: linear-gradient(112deg, #ed0233 0%, #003eb7 100%) 1;
+}
+
+.faq__category-input:disabled + .faq__category-text {
+  opacity: 0.2;
 }
 
 .faq__category-input:checked + .faq__category-text {
@@ -103,14 +120,14 @@
   }
 }
 
-  .faq__questions-item:last-child {
-    padding: 20px 0 20px;
-    border-bottom: 1px solid $color-btn-divider;
+.faq__questions-item:last-child {
+  padding: 20px 0 20px;
+  border-bottom: 1px solid $color-btn-divider;
 
-    @media (min-width: $tablet-width) {
-      padding: 23px 0 22px;
-    }
+  @media (min-width: $tablet-width) {
+    padding: 23px 0 22px;
   }
+}
 
 .faq__questions-item:first-child {
   padding: 20px 0;
@@ -238,7 +255,7 @@
     height: 1px;
     left: 25%;
     background-color: $color-btn-border;
-    transition: transform 1s ease;
+    transition: transform 1s ease, background-color 0.3s ease;
 
     @media (min-width: $tablet-width) {
       width: 20px;
@@ -254,7 +271,105 @@
     left: 25%;
     transform: rotate(90deg);
     background-color: $color-btn-border;
+    transition: transform 1s ease, background-color 0.3s ease;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      left: 24%;
+    }
+  }
+}
+
+.faq__questions-button:hover {
+  background-color: $color-btn-border;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    background-color: $color-bg-secondary;
+    transition: background-color 0.3s ease;
+  }
+
+  &::after {
+    background-color: $color-bg-secondary;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.faq__questions-button:focus,
+.faq__questions-button:focus-visible {
+  border: 1px solid $color-font-primary;
+  background-color: $color-btn-divider;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    background-color: $color-bg-secondary;
+    transition: background-color 0.3s ease;
+  }
+
+  &::after {
+    background-color: $color-bg-secondary;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.faq__questions-button:disabled {
+  opacity: 0.3;
+}
+
+.faq__questions-button.faq__questions-button--opened {
+  background-color: $color-font-primary;
+  transition: background-color 1s ease;
+
+  &::after {
+    background-color: $color-bg-secondary;
+    transform: rotate(180deg);
     transition: transform 1s ease;
+  }
+
+  &::before {
+    background-color: $color-bg-secondary;
+    transform: rotate(180deg);
+    transition: transform 1s ease;
+  }
+}
+
+.faq__questions-button.faq__questions-button--closed {
+  position: relative;
+  padding: 14px;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid $color-btn-border;
+  transition: background-color 1s ease;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 1px;
+    left: 25%;
+    background-color: $color-btn-border;
+    transition: transform 1s ease, background-color 0.3s ease;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      left: 24%;
+    }
+  }
+
+    &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 1px;
+    left: 25%;
+    transform: rotate(90deg);
+    background-color: $color-btn-border;
+    transition: transform 1s ease, background-color 0.3s ease;
 
     @media (min-width: $tablet-width) {
       width: 20px;
