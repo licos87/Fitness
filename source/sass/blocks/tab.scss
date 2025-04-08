@@ -20,7 +20,7 @@
 }
 
 .tab__title-wrapper {
-  width: 100%;
+  width: 290px;
   margin: 0 auto;
   padding-bottom: 5px;
   display: flex;
@@ -63,7 +63,17 @@
       height: 328px;
       bottom: -48px;
       left: calc(100% - 66px);
-      background: url("../../img/plates@1x.png") center no-repeat transparent;
+      background-image: -webkit-image-set(
+        url("../../img/plates@1x.webp") 1x,
+        url("../../img/plates@2x.webp") 2x
+      );
+      background-image: image-set(
+        url("../../img/plates@1x.webp") 1x,
+        url("../../img/plates@2x.webp") 2x
+      );
+      background-size: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
       transform: rotate(150deg);
       z-index: -10;
     }
@@ -175,7 +185,6 @@
   gap: 18px;
   background-color: $color-bg-secondary;
   border: 7px solid transparent;
-
 
   @media (min-width: $tablet-width) {
     padding: 58px;
@@ -341,12 +350,11 @@
   &:focus,
   &:focus-visible {
     color: $color-bg-secondary;
-    background:
-      linear-gradient(
-        151deg,
-        rgba(237, 2, 51, 0.8) 0%,
-        rgba(0, 62, 183, 0.8) 100%
-      );
+    background: linear-gradient(
+      151deg,
+      rgba(237, 2, 51, 0.8) 0%,
+      rgba(0, 62, 183, 0.8) 100%
+    );
     border: 2px solid #000000;
   }
 
